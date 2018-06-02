@@ -1,0 +1,23 @@
+---
+kind: "operation"
+client: "com.atomist:rug"
+version: "1.0.0-m.7"
+generator:
+  name: "NewMavenProject"
+  group: "shboland"
+  artifact: "boot-api"
+  version: "1.0.0"
+  origin:
+    repo: "git@github.com:sybrenboland/boot-api.git"
+    branch: "master"
+    sha: "1f9ac1d*"
+  parameters:
+    - "artifactId": "spring-boot-api"
+    - "groupId": "org.shboland"
+    - "version": "1.0.0"
+    - "apiModuleName": "api"
+    - "coreModuleName": "core"
+    - "persistenceModuleName": "persistence"
+    - "domainModuleName": "domain"
+    - "databaseModuleName": "db"
+

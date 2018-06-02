@@ -1,0 +1,33 @@
+sudo: required
+
+language: java
+jdk: oraclejdk8
+
+services:
+  - docker
+
+cache:
+  directories:
+  - "$HOME/.m2"
+
+env:
+  global:
+    - SONAR_TOKEN=<your sonar token>
+    - DOCKER_USER=<your dockerhub username>
+    - DOCKER_PASS=<your dockerhub password>
+
+addons:
+  sonarcloud:
+    organization: <your github organization name>
+    token:
+      secure: $SONAR_TOKEN
+
+install:
+  - mvn clean install
+
+script:
+  - sonar-scanner
+
+after_script:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+  - docker push shboland/api:1.0.0

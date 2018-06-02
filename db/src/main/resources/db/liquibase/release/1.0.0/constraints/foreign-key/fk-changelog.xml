@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="add_foreignkey_person_person_shop" author="shboland" >
+        <addForeignKeyConstraint baseColumnNames="PERSON_ID"
+                                 baseTableName="PERSON_SHOP"
+                                 constraintName="FK_PERSON_PERSON_SHOP"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="PERSON"/>
+    </changeSet>
+    
+<changeSet id="add_foreignkey_shop_person_shop" author="shboland" >
+        <addForeignKeyConstraint baseColumnNames="SHOP_ID"
+                                 baseTableName="PERSON_SHOP"
+                                 constraintName="FK_SHOP_PERSON_SHOP"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="SHOP"/>
+    </changeSet>
+    
+<!-- @Input -->
+
+</databaseChangeLog>

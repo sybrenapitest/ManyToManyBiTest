@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <include file="tables/tables-changelog.xml" relativeToChangelogFile="true" />
+    <include file="constraints/constraints-changelog.xml" relativeToChangelogFile="true" />
+    <include file="indexes/indexes-changelog.xml" relativeToChangelogFile="true" />
+
+    <changeSet id="tag-release-1.0.0" author="shboland" logicalFilePath="/release/1.0.0/changelog.xml">
+        <tagDatabase tag="release-1.0.0" />
+    </changeSet>
+
+</databaseChangeLog>

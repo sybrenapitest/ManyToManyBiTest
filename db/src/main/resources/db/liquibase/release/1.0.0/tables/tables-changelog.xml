@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    
+    <changeSet id="create_person" author="shboland">
+        <createTable tableName="PERSON">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+  
+<changeSet id="add_age_person" author="shboland">
+    <addColumn tableName="PERSON">
+      <column name="AGE" type="BIGINT" />
+    </addColumn>
+  </changeSet>
+  
+  
+    <changeSet id="create_shop" author="shboland">
+        <createTable tableName="SHOP">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+  
+<changeSet id="add_number_shop" author="shboland">
+    <addColumn tableName="SHOP">
+      <column name="NUMBER" type="BIGINT" />
+    </addColumn>
+  </changeSet>
+  
+  <changeSet id="create_person_shop" author="shboland">
+    <createTable tableName="PERSON_SHOP">
+      <column name="person_id" type="int" >
+        <constraints nullable="false" />
+      </column>
+      <column name="shop_id" type="int" >
+        <constraints nullable="false" />
+      </column>
+    </createTable>
+  </changeSet>
+  
+<!-- @Input -->
+
+</databaseChangeLog>
