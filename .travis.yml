@@ -12,9 +12,9 @@ cache:
 
 env:
   global:
-    - SONAR_TOKEN=<your sonar token>
-    - DOCKER_USER=<your dockerhub username>
-    - DOCKER_PASS=<your dockerhub password>
+    - SONAR_TOKEN=eb21f40ecb59f211d58e51d1fea3f4516f73bfbc
+    - DOCKER_USER=shboland
+    - DOCKER_PASS=.widb-7e3Ndockerhub
 
 addons:
   sonarcloud:
